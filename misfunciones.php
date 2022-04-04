@@ -4,7 +4,7 @@
 function conectaBBDD(){
     $direccion =  "localhost";
     $usuario_BBDD = "pruebasTEST";
-    $password_BBDD = "r56gK8igbnkR4yCE";
+    $password_BBDD = "QhCyF0c03u5VHwJb";
     $nombre_BBDD = "ejemploquiz";
     $puerto = "3306";
 

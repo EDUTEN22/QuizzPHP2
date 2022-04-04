@@ -23,22 +23,32 @@ $r = $consulta -> fetch_array();
                 <?php echo $r['enunciado']; ?>
             </button>
             <br><br>
-            <button class="btn btn-primary  col-12">
+            <button class="btn btn-primary col-12"  onClick="chequeaRespuesta('1','<?php echo $r['numero']; ?>');" >
                 <?php echo $r['r1']; ?>
             </button>
             <br><br>
-            <button class="btn btn-primary  col-12">
+            <button class="btn btn-primary col-12"  onClick="chequeaRespuesta('2''<?php echo $r['numero']; ?>');" >
                 <?php echo $r['r2']; ?>
             </button>
             <br><br>
-            <button class="btn btn-primary  col-12">
+            <button class="btn btn-primary col-12" onClick="chequeaRespuesta('3' '<?php echo $r['numero']; ?>');" >
                 <?php echo $r['r3']; ?>
             </button>
             <br><br>
-            <button class="btn btn-primary  col-12">
+            <button class="btn btn-primary col-12"  onClick="chequeaRespuesta('4' '<?php echo $r['numero']; ?>');" >
                 <?php echo $r['r4']; ?>
             </button>
         </div>
         
     </div>
 </div>
+<div id=cargaRespuesta></div>
+<script>
+  function chequeaRespuesta(_respuesta, _numeroPregunta){
+    $("#cargaRespuesta").load('chequeaRespuesta.php' ,
+    {
+      respuesta:_respuesta,
+      numeroPregunta:_numeroPregunta
+    });
+  }
+</script>
