@@ -1,4 +1,4 @@
-[6:29 p. m., 4/4/2022] AlvaroPeman: <?php
+<?php
 $tema = $_POST['tema'];
 
 include('misfunciones.php');
